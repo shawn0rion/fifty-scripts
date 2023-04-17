@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  background: #222;
+  color: #fff;
+}
+
+#steps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.step{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    background: transparent;
+    border: 3px solid #999;
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.step.progress{
+    border-color: #0dc5ff;
+}
+
+#buttons{
+    display: flex;
+    gap: 10px;
+    justify-content: center     ;
+}
+
+button{
+    cursor: pointer;
+    background-color: #00ade2;
+
+}
+
+#buttons > button{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    width: 100px;
+    border-radius: 8px;
+    padding: 10px;
+    color: #fff;
+    transition: .2s;
+}
+
+.disabled{
+    background: #444;
+    cursor: not-allowed;
+}

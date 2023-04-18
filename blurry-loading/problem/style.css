@@ -1,0 +1,26 @@
+body{
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.bg{
+    position: absolute;
+    height: 100%; width: 100%;
+    background-image: url(https://t4.ftcdn.net/jpg/04/45/66/39/360_F_445663915_O6BXSQLdwLwx4UUDQKC4NkKZu7vrS1gN.webp);
+
+    filter: blur(0px);
+    z-index: -1;
+}
+
+#load-text{
+    /* position: absolute; */
+    opacity: 1;
+    color: #000;
+    font-size: 2rem;
+}
+
+.hide{
+    display: none;
+}

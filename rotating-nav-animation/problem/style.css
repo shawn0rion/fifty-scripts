@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --circle-height: 220px;
+  --circle-width: 220px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #fafafa;
+  color: #222;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+    position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+  transition: transform .6s linear;
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#open,
+#close{
+    color: #fff;
+    background: transparent;
+    border: 0;
+    font-size: 2rem;
+}
+
+#open{
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    bottom: calc((var(--circle-height) / 5));
+    right: calc(var(--circle-height) / 5);
+}
+
+#close{
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    bottom: calc((var(--circle-height) / 5));
+    left: calc(var(--circle-height) / 5);
+}
+
+.circle-container{
+    position: absolute;
+    top: calc(-1 * (var(--circle-height) / 2)); 
+    left: calc(-1 * (var(--circle-height) / 2));
+    height: var(--circle-height);
+    width: var(--circle-width);
+}
+
+.circle{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 1rem;
+    transform: rotate(0);
+    transition: transform .6s linear;
+}
+
+.rotate{
+    transform: rotate(-60deg);
+}
+
+.rotate-article{
+    transform-origin: top left;
+    transform: rotate(-30deg);
+}
+
+nav{
+    margin-left: 40px;
+    position: fixed;
+    left: 0;
+    bottom: 40px;
+    /* width: 200px; */
+}
+
+nav ul li {
+    transform: translateX(-100%);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    transition: transform 1s ease-in-out;
+}
+
+nav ul li + li {
+    transform: translateX(-150%);
+    margin-left: 15px;
+}
+
+nav ul li + li + li{
+    transform: translateX(-200%);
+    margin-left: 30px;
+}
+
+nav ul.show li{
+    transform: translateX(0);
+}

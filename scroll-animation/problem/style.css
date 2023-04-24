@@ -1,0 +1,52 @@
+:root{
+    --box-height: 200px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Pacifico', cursive;
+    background-color: #f9f9f9;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    align-items: center;
+}
+
+.box{
+    background-color: #0995dc;
+    color: #ffd663;
+    width: 400px;
+    margin: 10px 0;
+    height: 200px;
+    border-radius: 20px;
+    line-height: var(--box-height);
+    text-align: center;
+    font-size: 3rem;
+    max-height: var(--box-height);
+    transition: transform .3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+}
+
+/* which rules have greater CSS specificity? how can you change that? */
+.container .box:nth-child(even){
+    transform: translateX(-200vw);
+}
+
+.container .box:nth-child(odd){
+    transform: translateX(200vw);
+}
+
+.container .box.show{
+    transform: unset;
+}

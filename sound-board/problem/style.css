@@ -1,0 +1,42 @@
+body{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+}
+
+.play{
+    border: 5px solid #222;
+    color:#fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #222;
+    cursor: pointer;
+    font-size: 1rem;
+    /* text-align: center; */
+}
+
+.sound:focus .play{
+    border-color: #fff;
+}
+
+.sounds{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sound{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+    height: 130px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #11aeee;
+    justify-content: center;
+}

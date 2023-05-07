@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body{
+    background-color: #fff;
+    color: #fff;
+    display: grid;
+    font-family: 'Lato', sans-serif ;
+    height: 100vh;
+    place-items: center;
+}
+
+form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    height: 400px;
+    background-color: #004aad;
+}
+
+form > h2{
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    margin-bottom: auto;
+    letter-spacing: 1px;
+}
+.placeholder-text > *{
+    transition: transform .3s ease-in-out;
+}
+
+.input-field{
+    width: 100%;
+    font-size: 1.3rem;
+
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.placeholder-text{
+    display: flex;
+    position: absolute;
+    margin-left: 4px;
+}
+
+.placeholder-text > *:first-child{
+    text-transform: capitalize;
+}
+
+input{
+    display: flex;
+    border: 0;
+    width: 100%;
+    font-size: 1.3rem;
+    background-color: transparent;
+    outline: 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    padding-left: 4px;
+}
+
+input::first-letter{
+    text-transform: capitalize;
+}
+
+input.active{
+    color: #fff;
+    border-color: #1ac5ff;
+}
+
+.active{
+    color: #1ac5ff; 
+}
+
+/* input:focus {
+    color:
+} */
+
+.slide-up{
+    transform: translateY(-100%);
+}
+
+button[type="submit"]{
+    bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    padding: 5px 10px;
+    margin-top: auto;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: .3s;
+}
+
+button:focus{
+    outline: none;
+    background-color: #d8d8d8;
+}

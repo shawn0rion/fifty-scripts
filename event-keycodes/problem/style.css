@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+
+:root{
+    --primary: #927aff;
+    --secondary: #6b389e;
+    --background: #231138;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--background);
+    display: grid;
+    place-items: center;
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+.row{
+    display: flex;
+    gap: 20px;
+}
+
+.box-wrapper{
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--primary)
+}
+
+.title{
+    text-align: center;
+    color: var(--primary)
+}
+
+.box{
+    height: 90px; 
+    width: 180px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    border: 2px solid var(--secondary);
+}

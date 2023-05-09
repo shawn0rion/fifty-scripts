@@ -1,6 +1,9 @@
 const jokeButton = document.querySelector('.get-joke');
 const jokeDisplay = document.querySelector('.display');
 jokeButton.addEventListener('click', async () => {
+    if (jokeDisplay.textContent === ''){
+        jokeDisplay.classList.remove('hide');
+    }
     try {
         const joke = await fetchJoke();
         jokeDisplay.textContent = joke;
